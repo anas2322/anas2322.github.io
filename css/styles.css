@@ -126,8 +126,22 @@ body {
     .navbar a {
         font-size: 14px;
     }
-
     .content {
         font-size: 16px;
     }
+}
+
+.project {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.project h3 {
+    margin: 0;
+}
+
+.more {
+    display: none;
 }

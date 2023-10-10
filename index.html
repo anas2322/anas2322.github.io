@@ -1,61 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anas Alkhawar - Personal Website</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anas Alkhawar - Personal Website</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="header">
-            <img src="personal.jpg" alt="Anas Alkhawar">
-            <h1>Anas Alkhawar</h1>
-        </div>
-        <div class="navbar">
-            <a href="#" data-content="skillsContent">Skills</a>
-            <a href="#" data-content="workExperiencesContent">Work Experiences</a>
-            <a href="#" data-content="interestsContent">Interests</a>
-            <a href="#" data-content="projectsContent">Projects</a>
-            <a href="#" data-content="apiDataContent">API Data</a>
-        </div>
-
-        <!-- Skills Content -->
-        <div class="main-content" id="skillsContent">
-            <h2>Skills</h2>
-            <p>Skills content here...</p>
-        </div>
-
-        <!-- Work Experiences Content -->
-        <div class="main-content" id="workExperiencesContent" style="display: none;">
-            <h2>Work Experiences</h2>
-            <p>Work Experiences content here...</p>
-        </div>
-
-        <!-- Interests Content -->
-        <div class="main-content" id="interestsContent" style="display: none;">
-            <h2>Interests</h2>
-            <p>Interests content here...</p>
-        </div>
-
-        <!-- Projects Content -->
-        <div class="projects" id="projectsContent" style="display: none;">
-            <h2>Projects</h2>
-            <div class="project" id="project1">
-                <h3>Project 1</h3>
-                <p>Short description of project 1.</p>
-                <p class="more" hidden>Detailed description of project 1...</p>
-            </div>
-        </div>
-
-        <!-- API Data Content -->
-        <div id="apiDataContent" class="modal" style="display: none;">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p></p>
-            </div>
-        </div>
+  <div class="container">
+    <div class="header">
+      <img src="personal.jpg" alt="Anas Alkhawar">
+      <h1>Anas Alkhawar</h1>
     </div>
-    <script src="js/script.js"></script>
+    <div class="navbar">
+      <a href="#" data-content="skillsContent">Skills</a>
+      <a href="#" data-content="workExperiencesContent">Work Experiences</a>
+      <a href="#" data-content="interestsContent">Interests</a>
+      <a href="#" data-content="projectsContent">Projects</a>
+      <a href="#" id="fetchApiData" data-content="apiDataContent">API Data</a>
+
+    </div>
+
+    <!-- Skills Content -->
+    <div class="main-content" id="skillsContent" style="display: none;">
+      <h2>Skills</h2>
+      <p>Over the course of my studies in Computer Science and Data Science, I've acquired a comprehensive set of
+        skills. In my Computer Science major, I've honed my programming abilities in languages like Python, Java, and
+        C++, and delved deep into algorithms, data structures, and computer architecture. I've gained a solid
+        understanding of how operating systems function, the intricacies of databases, and the nuances of networking.
+        Additionally, through various group projects, I've developed essential soft skills, including teamwork,
+        effective communication, and project management.
+
+        On the other hand, my Data Science major has equipped me with a robust foundation in statistical analysis, data
+        visualization, and machine learning. I've become adept at cleaning and preparing data, ensuring it's primed for
+        analysis. My exposure to big data technologies like Hadoop and Spark has been particularly enlightening.
+        Moreover, I've mastered various domain-specific tools depending on the project's requirements, whether that
+        involves deep learning or natural language processing. Importantly, I've learned to communicate complex
+        data-driven insights effectively, bridging the gap between technical and non-technical stakeholders.
+
+        In essence, my academic journey has made me a versatile and well-rounded individual, ready to tackle challenges
+        in both Computer Science and Data Science domains.</p>
+    </div>
+
+    <!-- Work Experiences Content -->
+    <div class="main-content" id="workExperiencesContent" style="display: none;">
+      <h2>Work Experiences</h2>
+      <p>Over the past 5 years, I've established myself as a freelance Photoshop editor, catering to a diverse clientele
+        ranging from individuals to businesses. My journey in this field began out of a sheer passion for visual
+        storytelling, and soon, what started as a hobby transitioned into a full-fledged profession.
+
+        Most of my work revolves around enhancing and retouching photographs, ensuring they meet the aesthetic and
+        quality standards set by my clients. Whether it's restoring old photos, creating dynamic advertisements, or
+        simply perfecting a portrait, I've done it all. My clientele often commends my attention to detail, my ability
+        to understand their vision, and the creativity I infuse into every project.
+
+        In addition to basic editing, I've also undertaken complex assignments that involved compositing multiple
+        images, creating digital art, or designing marketing collateral from scratch. Being a freelancer has also honed
+        my skills in client communication, time management, and self-discipline.
+
+        The rapidly evolving world of digital art means there's always something new to learn. Thus, I've consistently
+        kept myself updated with the latest Photoshop techniques, plugins, and industry trends. This commitment to
+        continuous learning ensures that I provide contemporary and top-notch services to my clients.
+
+        In summary, my freelance journey in Photoshop editing has been both challenging and incredibly rewarding. Every
+        project presents a new opportunity to create and innovate, and I'm deeply passionate about bringing my client's
+        visions to life through my expertise. I'm excited about the future projects and the myriad of possibilities they
+        present.</p>
+    </div>
+
+    <!-- Interests Content -->
+    <div class="main-content" id="interestsContent" style="display: none;">
+      <h2>Interests</h2>
+      <ul>
+        <li>Machine Learning: Passionate about creating algorithms that allow computers to evolve and learn from data
+          patterns.</li>
+        <li>Data Analytics: Intrigued by extracting insights from large datasets and turning raw data into actionable
+          decisions.</li>
+        <li>Front End Development: Enthusiastic about designing and implementing user-friendly interfaces that enhance
+          user experiences on the web.</li>
+        <li>Network Computing: Interested in the design, setup, and management of interconnected computer systems to
+          optimize performance and security.</li>
+      </ul>
+    </div>
+
+    <!-- Projects Content -->
+    <div class="project" id="projectsContent" style="display: none;">
+      <h3>Big Data Mining</h3>
+      <p>Music Recommendation System.</p>
+      <ul class="more" hidden>
+        <li>Developed and implemented a music recommendation system, leveraging data manipulation, exploratory analysis,
+          and clustering techniques to deliver personalized song recommendations.</li>
+        <li>Conducted exploratory data analysis (EDA) on the dataset, including data cleaning techniques, correlation
+          analysis, and visualization of music genres' distribution over the years using plotly library.</li>
+        <li>Employed KMeans clustering to group songs based on audio features, such as tempo, loudness, and energy,
+          resulting in 12 clusters.</li>
+        <li>Utilized t-SNE algorithm for visualizing the clusters formed by KMeans in a 2-dimensional space, providing
+          insight into relationships between different music genres.</li>
+        <li>Implemented Principal Component Analysis (PCA) to reduce dimensionality of the feature space and visualize
+          the clusters' relationships using scatterplots.</li>
+        <li>Demonstrated proficiency in comparing PCA and t-SNE, highlighting the advantages of t-SNE in capturing
+          non-linear relationships in high-dimensional data.</li>
+      </ul>
+      <button class="read-more">Read More</button>
+    </div>
+
+    <!-- API Data Content -->
+    <div id="apiDataContent" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p></p>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
 </body>
+
 </html>

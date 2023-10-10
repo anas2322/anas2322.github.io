@@ -54,6 +54,11 @@ body {
     color: black;
   }
   
+  .navbar a.active {
+    background-color: #555;
+    color: white;
+  }
+  
   .main-content {
     display: flex;
     margin: 20px 0;

@@ -29,6 +29,15 @@ document.addEventListener("DOMContentLoaded", function() {
     function handleTabClick(event) {
       event.preventDefault();
   
+      // Remove the active class from all navbar items
+      const navItems = document.querySelectorAll('.navbar a');
+      navItems.forEach(item => {
+        item.classList.remove('active');
+      });
+  
+      // Add the active class to the clicked navbar item
+      event.target.classList.add('active');
+  
       // Hide all content sections
       const contents = document.querySelectorAll('.main-content, .project, .modal');
       contents.forEach(content => {
@@ -44,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("Target content not found for:", contentId);
       }
     }
+  
     const projectCard = document.getElementById('projectsContent');
     projectCard.addEventListener('click', function() {
       this.style.backgroundColor = this.style.backgroundColor === 'yellow' ? '#fff' : 'yellow';

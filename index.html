@@ -13,39 +13,46 @@
             <h1>Anas Alkhawar</h1>
         </div>
         <div class="navbar">
-            <a href="#">Skills</a>
-            <a href="#">Work Experiences</a>
-            <a href="#">Interests</a>
-            <a href="#projects">Projects</a>
-            <a href="#" id="fetchApiData">API Data</a>
+            <a href="#" data-content="skillsContent">Skills</a>
+            <a href="#" data-content="workExperiencesContent">Work Experiences</a>
+            <a href="#" data-content="interestsContent">Interests</a>
+            <a href="#" data-content="projectsContent">Projects</a>
+            <a href="#" data-content="apiDataContent">API Data</a>
         </div>
-        <div class="main-content">
-            <div class="left-menu">
-                <ul>
-                    <li>Programming Languages</li>
-                    <li>Framework</li>
-                </ul>
+
+        <!-- Skills Content -->
+        <div class="main-content" id="skillsContent">
+            <h2>Skills</h2>
+            <p>Skills content here...</p>
+        </div>
+
+        <!-- Work Experiences Content -->
+        <div class="main-content" id="workExperiencesContent" style="display: none;">
+            <h2>Work Experiences</h2>
+            <p>Work Experiences content here...</p>
+        </div>
+
+        <!-- Interests Content -->
+        <div class="main-content" id="interestsContent" style="display: none;">
+            <h2>Interests</h2>
+            <p>Interests content here...</p>
+        </div>
+
+        <!-- Projects Content -->
+        <div class="projects" id="projectsContent" style="display: none;">
+            <h2>Projects</h2>
+            <div class="project" id="project1">
+                <h3>Project 1</h3>
+                <p>Short description of project 1.</p>
+                <p class="more" hidden>Detailed description of project 1...</p>
             </div>
-            <div class="content">
-                <h2>Programming Languages</h2>
-                <p>I am very good at Python...</p>
-                
-                <!-- Placeholder for API data -->
-                <div id="apiData" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-            <div class="projects" id="projectsSection">
-                <h2>Projects</h2>
-                <div class="project" id="project1">
-                    <h3>Project 1</h3>
-                    <p>Short description of project 1.</p>
-                    <p class="more" hidden>Detailed description of project 1...</p>
-                </div>
-                <!-- Add more projects as needed -->
+        </div>
+
+        <!-- API Data Content -->
+        <div id="apiDataContent" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p></p>
             </div>
         </div>
     </div>

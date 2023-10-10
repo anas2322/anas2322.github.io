@@ -8,7 +8,7 @@ document.getElementById('fetchApiData').addEventListener('click', function() {
     })
     .then(response => response.json())
     .then(data => {
-        const modal = document.getElementById('apiData');
+        const modal = document.getElementById('apiDataContent');
         const span = document.getElementsByClassName("close")[0];
         modal.style.display = "block";
         modal.querySelector('p').innerHTML = JSON.stringify(data);
@@ -25,28 +25,22 @@ document.getElementById('fetchApiData').addEventListener('click', function() {
     });
 });
 
-// Add these event listeners for the projects
-document.getElementById('project1').addEventListener('mouseover', function() {
-    this.style.backgroundColor = "#e0e0e0";
-});
+function handleTabClick(event) {
+    event.preventDefault();
 
-document.getElementById('project1').addEventListener('mouseout', function() {
-    this.style.backgroundColor = "";
-});
+    // Hide all content sections
+    const contents = document.querySelectorAll('.main-content, .projects, .modal');
+    contents.forEach(content => {
+        content.style.display = 'none';
+    });
 
-document.getElementById('project1').addEventListener('click', function() {
-    const moreDetails = this.querySelector('.more');
-    moreDetails.hidden = !moreDetails.hidden;
-});
+    // Display the content section corresponding to the clicked tab
+    const contentId = event.target.getAttribute('data-content');
+    document.getElementById(contentId).style.display = 'block';
+}
 
-document.getElementById('project1').addEventListener('dblclick', function() {
-    const moreDetails = this.querySelector('.more');
-    moreDetails.hidden = true;
+// Attach event listeners to tabs
+const tabs = document.querySelectorAll('.navbar a');
+tabs.forEach(tab => {
+    tab.addEventListener('click', handleTabClick);
 });
-
-document.getElementById('project1').addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-    alert('Custom Context Menu for Project 1');
-});
-
-// Add more event listeners if you have more projects...
